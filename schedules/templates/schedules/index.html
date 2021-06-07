@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskie</title>
+    {%load static %}
+    <link rel="stylesheet" type ="text/css" href="{% static './schedules/style.css' %}">
+</head>
+<body>
+    
+<h1><span>{{request.user}}<a href="{% url 'logout' %}">logout</a></span></h1>
+
+   <div class="form">
+      
+        <form method="POST" >
+            {% csrf_token %} 
+            {{form.Nschedule}}
+           
+            <input type="submit" value="ADD TO SCHEDULE" class="input">
+            
+        </form> <br>
+    
+    {% for s in scheduled %}
+    
+       {% if s.status == True %}
+        <del>{{s.Nschedule}}</del> <span>task completed added on {{s.created}}</span> <br>
+        {% else %}
+        <div>{{s.Nschedule}}</div> <span>task was not completed  added on {{s.created}}</span> <br>
+        <a href="{% url 'updates' s.id %}" class="update">Update</a>
+        <a href="{% url 'delete' s.id %}" class="delete">Delete</a><br>
+        {% endif %}
+        {% endfor %}
+
+</div>
+</body>
+</html>

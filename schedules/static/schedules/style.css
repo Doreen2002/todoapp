@@ -1,0 +1,88 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    background-color:whitesmoke;
+    display: inline-block;
+   
+
+}
+title
+{
+    font-size: 5em;
+    color:darkkhaki;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+body{
+    width: 100%;
+}
+input
+{
+    width: 67em;
+    height: 3.5em;
+    padding: 10px;
+   
+    margin: 1em 10em;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: solid 1px silver;
+}
+.input
+{
+    width: 25em;
+    height: 3em;
+    margin: 1em 28em;
+    background-color: gray;
+    border-radius: 0px;
+}
+a{
+    text-decoration: none;
+}
+.update
+{
+    border: 1px solid silver;
+    background-color:rgb(123, 161, 123);
+    height: 1.5em;
+    width: 8em;
+    color: white;
+    border-radius: 2em;
+    text-align: center;
+    padding: 4px 1px;
+    font-size: 1em;
+ 
+}
+
+.delete
+{
+    border: 1px solid silver;
+    background-color:rgb(253, 53, 53);
+    height: 1.5em;
+    width: 8em;
+    border-radius: 3em;
+    color: white;
+    padding: 4px 1px;
+    font-size: 1em;
+   
+    text-align: center;
+}
+
+.form 
+{
+    width: 67em;
+   border-radius: 2px;
+background-color: rgb(253, 239, 212);
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+margin-right: 50px;
+margin-left: 1px;
+margin-top: 60px;
+}
+
+a , div, del, form, span{
+    background-color: inherit;
+}
+del,span,div, .delete, .update{
+    color:darkslategrey;
+    font-size: 20px;
+    margin: 2% 7%;
+}

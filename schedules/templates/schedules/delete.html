@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    {%load static %}
+    <link rel="stylesheet" type ="text/css" href="{% static 'schedules/style.css' %}">
+</head>
+<body>
+    <p>Are you sure yo want to delete {{item}}</p>
+    <a href="{% url 'schedules' %}">cancel</a>
+    
+    <form method="POST">
+        {% csrf_token %}
+        <input type="submit" value="delete" class="input">
+    </form>  
+</body>
+</html>
